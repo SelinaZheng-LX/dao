@@ -1,10 +1,13 @@
 const asyncHandler = require('express-async-handler')
+const Lesson = require('../models/lessonModel')
+const generateLesson = require('../services/lessonService')
 
 // @desc Get lessons
 // @route GET /api/lessons
 // @access Private
 const getLessons = asyncHandler(async (req,res) => {
-    res.status(200).json({message: 'Get lessons'})
+    const lessons = await Lesson.find()
+    res.status(200).json(lessons)
 })
 
 // @desc Create a lessons
@@ -12,26 +15,49 @@ const getLessons = asyncHandler(async (req,res) => {
 // @access Private
 const createLesson = asyncHandler(async (req,res) => {
     
-    if(!req.body.text) {
-        res.status(400)
-        throw new Error('Please add a text field')
-    }
+    const generatedText = (await generateLesson()).choices[0].message.content;
 
-    res.status(200).json({message: 'Create a lesson'})
+
+    const lesson = await Lesson.create({
+        text: generatedText
+    })
+
+    res.status(200).json(lesson)
 })
 
 // @desc Edit a lesson
 // @route PUT /api/lessons/:id
 // @access Private
 const editLesson = asyncHandler(async (req, res) => {
-    res.status(200).json({message: `Edit lesson ${req.params.id}`})
+    const lesson = await Lesson.findById(req.params.id)
+
+    if(!lesson) {
+        res.status(400)
+        throw new Error('Lesson not found')
+    }
+
+    const updatedLesson = await Lesson.findByIdAndUpdate(req.params.id, req.body, {
+        new: true,
+    })
+
+    res.status(200).json(updatedGoal)
 })
 
 // @desc Delete a lesson
 // @route DELETE /api/lessons/:id
 // @access Private
 const deleteLesson = asyncHandler(async (req, res) => {
-    res.status(200).json({message: `Edit lesson ${req.params.id}`})
+
+    const lesson = await Lesson.findById(req.params.id)
+
+    if(!lesson) {
+        res.status(400)
+        throw new Error('Lesson not found')
+    }
+
+    await Lesson.findByIdAndDelete(req.params.id)
+
+    res.status(200).json({id: req.params.id})
 })
 
 module.exports = {

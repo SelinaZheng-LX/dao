@@ -1,42 +1,86 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+html {
+    box-sizing: border-box;
+    font-size: var(--standard-font-size);
+    line-height: 1.15; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    width: 100%;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Track */
+::-webkit-scrollbar-track {
+    background: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
 }
 
-.card {
-  padding: 2em;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
 }
 
-.read-the-docs {
-  color: #888;
+img {
+    pointer-events: none;
+}
+body {
+    font-weight: 400;
+    line-height: 1.75;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    font-family: var(--body-font);
+    scroll-behavior: smooth;
+}
+:root {
+    /* fonts */
+    --body-font: "Alata";
+    /* colors */
+    --primary: #000;
+    --secondary: #02f3e9;
+    --tertiary: #2f84ff;
+    --white: #fff;
+    --off-white: #f0f0f0;
+    --light-text: rgba(2, 35, 211, 0.4);
+    --shaded-text: rgba(114, 113, 113, 1);
+    --dark-text: #24201e;
+    --bg-primary: #272727;
+    --bg-secondary: rgb(52, 52, 52);
+    --login-shadow: rgba(0, 0, 0, 0.25);
+
+    /* font weight */
+    --fw-light: 300;
+    --fw-reg: 400;
+    --fw-med: 500;
+    --fw-semi: 600;
+    --fw-bold: 700;
+
+    /* font sizes */
+    --standard-font-size: 62.5%;
+    --h1: 5.653rem;
+    --h2: 3.998rem;
+    --h3: 2.827rem;
+    --h4: 1.999rem;
+    --h5: 1.6rem;
+    --h6: 1.414rem;
+    --h7: 1.2rem;
+    --h8: 1rem;
+    --smallText: 0.8rem;
 }

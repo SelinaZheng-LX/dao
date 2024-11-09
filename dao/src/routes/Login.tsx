@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // MUI Imports
 import TextField from "@mui/material/TextField";
 import Visibility from "@mui/icons-material/Visibility";
@@ -37,53 +38,13 @@ export default function Login() {
                         <p className="slogan">Personalize learning</p>
                     </div>
                     <div className="login flex-col-center">
-                        <h2 className="login-title">Create an Account</h2>
+                        <h2 className="login-title">Sign in</h2>
                         <TextField
                             id="outlined-basic"
                             label="Email Address"
                             variant="standard"
                             style={{ width: "85%" }}
                         />
-                        <TextField
-                            id="outlined-basic"
-                            label="Re-enter email address"
-                            variant="standard"
-                            style={{ width: "85%" }}
-                        />
-                        <FormControl
-                            sx={{ m: 1, width: "85%" }}
-                            variant="standard"
-                        >
-                            <InputLabel htmlFor="standard-adornment-password">
-                                Password
-                            </InputLabel>
-                            <Input
-                                id="standard-adornment-password"
-                                type={showPassword ? "text" : "password"}
-                                endAdornment={
-                                    <InputAdornment position="end">
-                                        <IconButton
-                                            aria-label={
-                                                showPassword
-                                                    ? "hide the password"
-                                                    : "display the password"
-                                            }
-                                            onClick={handleClickShowPassword}
-                                            onMouseDown={
-                                                handleMouseDownPassword
-                                            }
-                                            onMouseUp={handleMouseUpPassword}
-                                        >
-                                            {showPassword ? (
-                                                <VisibilityOff />
-                                            ) : (
-                                                <Visibility />
-                                            )}
-                                        </IconButton>
-                                    </InputAdornment>
-                                }
-                            />
-                        </FormControl>
                         <FormControl
                             sx={{ m: 1, width: "85%" }}
                             variant="standard"
@@ -128,11 +89,13 @@ export default function Login() {
                                 fontFamily: "Alata",
                             }}
                         >
-                            Sign Up
+                            <Link to="/teacher" className="font-white">
+                                Log in
+                            </Link>
                         </Button>
-                        <p className="login-text">
-                            Don't have an account? Sign up
-                        </p>
+                        <Link to="/home" className="login-text">
+                            Have an account? Log in
+                        </Link>
                     </div>
                 </div>
             </section>

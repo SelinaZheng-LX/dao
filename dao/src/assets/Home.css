@@ -42,3 +42,9 @@
 .button {
     font-size: var(--h2);
 }
+
+.font-white,
+.font-white::after,
+.font-white:hover {
+    color: var(--white);
+}

@@ -10,6 +10,10 @@ import InputLabel from "@mui/material/InputLabel";
 import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
+import Radio from "@mui/material/Radio";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import FormLabel from "@mui/material/FormLabel";
 
 export default function Home() {
     const [showPassword, setShowPassword] = useState(false);
@@ -39,6 +43,29 @@ export default function Home() {
                     </div>
                     <div className="login flex-col-center">
                         <h2 className="login-title">Create an Account</h2>
+                        <FormControl>
+                            <FormLabel id="demo-row-radio-buttons-group-label">
+                                Are you a student or a teacher?
+                            </FormLabel>
+                            <RadioGroup
+                                row
+                                aria-labelledby="demo-row-radio-buttons-group-label"
+                                name="row-radio-buttons-group"
+                            >
+                                <FormControlLabel
+                                    value="teacher"
+                                    control={<Radio />}
+                                    label="Teacher"
+                                    style={{ color: "#000" }}
+                                />
+                                <FormControlLabel
+                                    value="student"
+                                    control={<Radio />}
+                                    label="Student"
+                                    style={{ color: "#000" }}
+                                />
+                            </RadioGroup>
+                        </FormControl>
                         <TextField
                             id="outlined-basic"
                             label="Email Address"

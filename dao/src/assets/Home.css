@@ -1,5 +1,44 @@
 @import url(../App.css);
-
+.body {
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
 .flex-center {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+.flex-col-center {
+    display: flex;
+    flex-direction: column;
+}
+.title-col {
+    font-size: var(--h1);
+    color: var(--white);
+    font-weight: var(--fw-bold);
+}
+.period {
+    color: var(--secondary);
+}
+.login {
+    width: 23vw;
+    height: 70vh;
+    border-radius: 2rem;
+    background: var(--off-white);
+    justify-content: space-around;
+    align-items: center;
+    padding: 6rem;
+    box-shadow: 1rem 1rem var(--tertiary);
+}
+.login-title {
+    color: var(--tertiary);
+    font-size: var(--h3);
+}
+.login-text {
+    color: var(--tertiary);
+}
+.button {
+    font-size: var(--h2);
 }

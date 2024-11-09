@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 // MUI Imports
 import TextField from "@mui/material/TextField";
 import Visibility from "@mui/icons-material/Visibility";
@@ -11,7 +10,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 import FormControl from "@mui/material/FormControl";
 import Button from "@mui/material/Button";
 
-export default function Home() {
+export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
@@ -131,9 +130,9 @@ export default function Home() {
                         >
                             Sign Up
                         </Button>
-                        <Link to="/login" className="login-text">
-                            Have an account? Log in
-                        </Link>
+                        <p className="login-text">
+                            Don't have an account? Sign up
+                        </p>
                     </div>
                 </div>
             </section>

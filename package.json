@@ -1,0 +1,30 @@
+{
+  "name": "dao",
+  "version": "1.0.0",
+  "description": "STEM Education APP for Hack Princeton Fall 2024",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SelinaZheng-LX/dao.git"
+  },
+  "author": "Haasil Pujara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SelinaZheng-LX/dao/issues"
+  },
+  "homepage": "https://github.com/SelinaZheng-LX/dao#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^8.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

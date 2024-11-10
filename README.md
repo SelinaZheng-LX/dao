@@ -1,12 +1,17 @@
-# Getting Started with Create React App
+# Getting Started with Dao React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Overview
+
+Overview
+This React project aims to revolutionize STEM education by providing a platform for teachers to create bite-sized lessons tailored to individual student needs. This approach offers a more personalized and engaging learning experience.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -39,27 +44,45 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`
+dao/
+├── public
+│   └── ignore
+├── src
+│   ├── App.tsx
+│   ├── components
+│   │   ├── LessonComp.tsx
+│   │   ├── ...
+│   ├── routes
+│   │   ├── Home.tsx
+│   │   ├── teacherLesson.tsx
+│   │   ├── ...
+│   ├── assets
+|   |   ├── Home.css
+|   |   ├── ...
+│   ├──App.css
+|   |
+│   └── App.tsx
+├── package.json
+├── README.md (this file)
+`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Key Features
 
-### Code Splitting
+* User Authentication: Allows teachers to create accounts and manage their lessons.
+* Lesson Creation: A user-friendly interface for creating bite-sized lessons, including text, images, and videos.
+* Lesson Organization: Teachers can organize lessons into units or topics.
+* Student Progress Tracking: Tracks student progress through lessons and provides personalized recommendations.
+* Interactive Elements: Includes quizzes, coding challenges, and simulations to enhance learning.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Future Enhancements:
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Collaboration: Enable teachers to collaborate on lesson creation and share resources.
+* Advanced Analytics: Provide detailed analytics on student performance and engagement.
+* Adaptive Learning: Implement algorithms to dynamically adjust the difficulty level of lessons based on student performance.
+* Accessibility: Ensure the platform is accessible to users with disabilities.
 
 ### Deployment
 

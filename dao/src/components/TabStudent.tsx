@@ -38,6 +38,7 @@ export default function BasicTabs() {
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
+        console.log(event);
     };
     const lessons: StuLessons[] = [
         {

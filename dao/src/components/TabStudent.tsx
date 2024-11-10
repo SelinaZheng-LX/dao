@@ -39,47 +39,47 @@ export default function BasicTabs() {
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
     };
-    const lessons: LessonComp[] = [
+    const lessons: StuLessons[] = [
         {
             src: "https://picsum.photos/300",
             alt: "Image 1",
             date: "November 9, 2024",
-            title: "Hackathons Suck",
+            title: "Testing Name",
             completion: false,
         },
         {
             src: "https://picsum.photos/300",
             alt: "Image 1",
             date: "November 9, 2024",
-            title: "Hackathons Suck",
+            title: "Trees",
             completion: false,
         },
         {
             src: "https://picsum.photos/300",
             alt: "Image 2",
             date: "November 9, 2024",
-            title: "Hackathons Suck",
+            title: "Linked Lists",
             completion: false,
         },
         {
             src: "https://picsum.photos/300",
             alt: "Image 2",
             date: "November 9, 2024",
-            title: "Hackathons Suck",
+            title: "Hashmaps",
             completion: false,
         },
         {
             src: "https://picsum.photos/300",
             alt: "Image 2",
             date: "November 9, 2024",
-            title: "Hackathons Suck",
+            title: "Time Complexity",
             completion: false,
         },
         {
             src: "https://picsum.photos/300",
             alt: "Image 2",
             date: "November 9, 2024",
-            title: "Hackathons Suck",
+            title: "Technical Interview",
             completion: false,
         },
     ];

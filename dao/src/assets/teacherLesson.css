@@ -30,3 +30,44 @@ hr.solid {
     margin-top: 2rem;
     border-top: 0.5px solid #bbbbbb5f;
 }
+.modal {
+    width: 60%;
+    height: 40%;
+    background-color: var(--off-white);
+    border-radius: 25px;
+    box-shadow: 1rem 1rem var(--tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--h3);
+}
+.plus {
+    width: 25%;
+    height: 35vh;
+    padding-bottom: 6rem;
+    font-size: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    margin-top: 5%;
+    margin-right: 5.5rem;
+    border: solid var(--off-white) 0.2rem;
+    border-radius: 1rem;
+}
+.text-field-multiline {
+    width: 50%;
+    height: 40%;
+    font-size: var(--h4);
+}
+
+.tab-class {
+    color: var(--off-white);
+    font-size: var(--h3);
+}
+
+.tab-static {
+    left: 10%;
+    top: 10%;
+    position: absolute;
+}

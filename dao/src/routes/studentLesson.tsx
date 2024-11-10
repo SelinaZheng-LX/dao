@@ -4,7 +4,7 @@ import Tab from "../components/TabsTeacher.tsx";
 // import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 
-export default function teacherLesson() {
+export default function StudentLesson() {
     return (
         <>
             <section id="teacherInterface">

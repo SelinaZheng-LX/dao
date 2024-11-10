@@ -1,0 +1,31 @@
+@import url(../App.css);
+.navbar{
+    height: 15%;
+    width: 80%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position: absolute;
+    top: 0em;
+    background-color: var(--bg-primary);
+    border-bottom: 1mm ridge var(--white);
+
+}
+
+.nav-title{
+    color: var(--white);
+    font-size: var(--h1);
+    justify-content: center;
+    
+}
+
+.signout{
+    color:var(--white);
+    font-size: 25px;
+    justify-content: flex-end;
+    margin-left: auto;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-right: 10px;
+
+}

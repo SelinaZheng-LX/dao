@@ -2,7 +2,7 @@ import { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import LessonComp from "./LessonComp";
+import StuLessons from "./StuLessons";
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -101,14 +101,14 @@ export default function BasicTabs() {
                         style={{ fontSize: "var(--h5)" }}
                     />
                     <Tab
-                        label="Analytics"
+                        label="Quizzes"
                         {...a11yProps(1)}
                         style={{ fontSize: "var(--h5)" }}
                     />
                 </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
-                <LessonComp lessons={lessons} />
+                <StuLessons lessons={lessons} />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 Item Two

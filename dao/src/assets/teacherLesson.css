@@ -1,6 +1,7 @@
 @import url(../App.css);
 #teacherInterface {
     display: flex;
+    flex-direction: column;
     width: 100vw;
     align-items: center;
     justify-content: space-around;
@@ -68,6 +69,6 @@ hr.solid {
 
 .tab-static {
     left: 10%;
-    top: 10%;
+    top: 20%;
     position: absolute;
 }

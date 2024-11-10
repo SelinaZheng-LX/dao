@@ -66,7 +66,7 @@ const LessonComp = ({ lessons }: { lessons: LessonComp[] }) => {
         setExpanded(!expanded);
     };
     return (
-        <Container sx={{ width: "100%", marginTop: "8%" }}>
+        <Container sx={{ width: "100%", marginTop: "13%" }}>
             <Grid
                 container
                 rowSpacing={1}

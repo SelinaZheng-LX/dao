@@ -1,5 +1,6 @@
 @import url(./assets/Home.css);
 @import url(./assets/teacherLesson.css);
+@import url(./assets/navbar.css);
 @import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
 html {
     box-sizing: border-box;

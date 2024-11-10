@@ -7,14 +7,14 @@ const User = require('../models/userModel')
 // @route   POST /api/users
 // @access  Public
 const registerUser = asyncHandler(async(req, res) => {
-    const {name, email, password, isTeacher} = req.body;
+    const {email, password, isTeacher} = req.body;
 
-    if(!name || !email || !password) {
+    if(!email || !password) {
         res.status(400);
         throw new Error('Please add all fields');
     }
 
-    if (isTeacher != '0' && isTeacher != '1') {
+    if (isTeacher != 'student' && isTeacher != 'teacher') {
         res.status(400)
         throw new Error('Please select either Student or Teacher')
     }
@@ -33,7 +33,6 @@ const registerUser = asyncHandler(async(req, res) => {
 
     // Create user
     const user = await User.create({
-        name,
         email,
         password: hashedPassword,
         isTeacher   
@@ -41,17 +40,16 @@ const registerUser = asyncHandler(async(req, res) => {
 
     let role = ''
 
-    if (user.isTeacher === '0') {
+    if (user.isTeacher === 'student') {
         role = 'Student'
     }
-    else if (user.isTeacher === '1') {
+    else if (user.isTeacher === 'teacher') {
         role = 'Teacher'
     }
 
     if (user) {
         res.status(201).json({
             _id: user.id,
-            name: user.name,
             email: user.email,
             isTeacher: role
         })
@@ -59,16 +57,40 @@ const registerUser = asyncHandler(async(req, res) => {
         res.status(400)
         throw new Error('Invalid User Data')
     }
-    
-    res.json({message: 'Register user'});
 })
 
 // @desc    Authenticate user
 // @route   POST /api/users/login
 // @access  Public
 const loginUser = asyncHandler(async(req, res) => {
-    res.json({message: 'Login user'});
-})
+    const {email, password} = req.body;
+    console.log(req.body);
+
+    if(!email || !password) {
+        return res.status(400).json({message: 'Please complete all fields'});
+    }
+
+    const user = await User.findOne({email});
+    
+    if (!user) {
+        return res.status(400).json({message: 'Your password or email is incorrect'});
+    }
+
+    const passwordMatches = await bcrypt.compare(password, user.password);
+
+    if (!passwordMatches) {
+        return res.status(400).json({message: 'Your password or email is incorrect'});
+    }
+
+    //if password matches, generate a token and respond with userData
+    const token = generateToken(user._id);
+
+    res.status(200).json({
+        _id: user._id,
+        email: user.email,
+        token,
+    });
+});
 
 // @desc    Get user data
 // @route   GET /api/users/me

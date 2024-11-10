@@ -1,10 +1,6 @@
 const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
-    name: {
-        type: String,
-        required: [true, 'Please add a name']
-    },
     email: {
         type: String,
         required: [true, 'Please add an email'],
@@ -16,7 +12,7 @@ const userSchema = mongoose.Schema({
     },
     isTeacher: {
         type: String,
-        required: [true, "Please indicate whether you are a student or teacher"]
+        // required: [false, "Please indicate whether you are a student or teacher"]
     }
 },
 {

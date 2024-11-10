@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 // MUI Imports
 import TextField from "@mui/material/TextField";
 import Visibility from "@mui/icons-material/Visibility";
@@ -13,6 +14,8 @@ import Button from "@mui/material/Button";
 
 export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -27,6 +30,37 @@ export default function Login() {
     ) => {
         event.preventDefault();
     };
+
+    const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setEmail(event.target.value);
+    };
+
+    const handlePasswordChange = (
+        event: React.ChangeEvent<HTMLInputElement>
+    ) => {
+        setPassword(event.target.value);
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+
+        //Data to send to the backend
+        const userData = {
+            email,
+            password,
+        };
+        console.log("Sending data to backend:", userData);
+
+        axios
+            .post("http://localhost:4000/api/users/login", userData)
+            .then((response) => {
+                console.log("User logged in:", response.data);
+            })
+            .catch((error) => {
+                console.log("Error authenticating user", error);
+            });
+    };
+
     return (
         <>
             <section className="body">
@@ -42,6 +76,8 @@ export default function Login() {
                         <TextField
                             id="outlined-basic"
                             label="Email Address"
+                            value={email}
+                            onChange={handleEmailChange}
                             variant="standard"
                             style={{ width: "85%" }}
                         />
@@ -55,6 +91,8 @@ export default function Login() {
                             <Input
                                 id="standard-adornment-password"
                                 type={showPassword ? "text" : "password"}
+                                value={password}
+                                onChange={handlePasswordChange}
                                 endAdornment={
                                     <InputAdornment position="end">
                                         <IconButton
@@ -81,6 +119,7 @@ export default function Login() {
                         </FormControl>
                         <Button
                             className="button"
+                            onClick={handleSubmit}
                             variant="contained"
                             size="large"
                             style={{

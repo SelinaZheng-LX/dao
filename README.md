@@ -48,25 +48,24 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 `
 dao/
-├── public
-│   └── ignore
-├── src
-│   ├── App.tsx
-│   ├── components
-│   │   ├── LessonComp.tsx
-│   │   ├── ...
-│   ├── routes
-│   │   ├── Home.tsx
-│   │   ├── teacherLesson.tsx
-│   │   ├── ...
-│   ├── assets
-|   |   ├── Home.css
-|   |   ├── ...
-│   ├──App.css
-|   |
-│   └── App.tsx
-├── package.json
-├── README.md (this file)
+├── public      # Contains static assets served by the web server
+│   └── ignore  # Likely contains files that should not be served (e.g., .gitignore)
+├── src          # Main source code directory for the React application
+│   ├── App.tsx  # Main application root component
+│   ├── components  # Reusable UI components used throughout the app
+│   │   ├── LessonComp.tsx  # Example component for displaying lessons
+│   │   ├── ...   # Additional components for other functionalities
+│   ├── routes     # Routing configuration for navigation between different app sections
+│   │   ├── Home.tsx    # Component for the main landing or home page
+│   │   ├── teacherLesson.tsx  # Component for the teacher's lesson creation/management area
+│   │   ├── ...         # Additional routes for other pages/functionalities
+│   ├── assets      # Custom styles and images used within the app
+│   │   ├── Home.css  # Example stylesheet for the Home component
+│   │   ├── ...       # Additional assets (stylesheets, images, etc.)
+│   ├── App.css    # Global styles for the entire application
+│   └── index.tsx  # Entry point for the React application
+├── package.json  # Contains project dependencies, scripts (e.g., `dev`, `build`), and configuration
+├── README.md    # Project documentation (this file)
 `
 
 ### Key Features

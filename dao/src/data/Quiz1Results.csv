@@ -1,0 +1,22 @@
+Student ID,Last Name,First Name,Date,Question 1,2,3,4,5,6,7,Score ,Pass/Fail,Percentage
+2305581,Johnson,Dwayne,11/09/2024,Correct ,Wrong,Wrong,Correct ,Wrong,Wrong,Correct ,3/7,Fail,43
+2401930,Grande,Ariana,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100
+2156716,Bezos,Jeff,11/09/2024,Correct ,Correct ,Correct ,Wrong,Correct ,Correct ,Correct ,6/7,Pass,86
+2992962,Musk,Elon,11/09/2024,Wrong,Correct ,Wrong,Correct ,Correct ,Correct ,Correct ,5/7,Pass,71
+2621418,Rodrigo,Olivia,11/09/2024,Correct ,Correct ,Wrong,Correct ,Wrong,Correct ,Wrong,4/7,Fail,57
+2773690,Picasso,Pablo,11/09/2024,Correct ,Correct ,Wrong,Wrong,Correct ,Wrong,Correct ,4/7,Fail,57
+2336806,Parks,Rosa,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100
+2739653,Z,Jay,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100
+2451994,Zuckerberg,Mark,11/09/2024,Wrong,Wrong,Wrong,Correct ,Wrong,Correct ,Wrong,2/7,Fail,29
+2116265,Darwin,Charles,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100
+2779237,Keller,Helen,11/09/2024,Correct ,Wrong,Correct ,Correct ,Correct ,Correct ,Correct ,6/7,Pass,86
+2320484,Christie,Agatha,11/09/2024,Correct ,Correct ,Wrong,Correct ,Correct ,Correct ,Correct ,6/7,Pass,86
+2561814,Hepburn,Audrey,11/09/2024,Wrong,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,6/7,Pass,86
+2116821,Hemingway,Ernest,11/09/2024,Correct ,Wrong,Wrong,Wrong,Wrong,Correct ,Correct ,3/7,Fail,43
+2145210,Caesar,Julius,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Wrong,Correct ,6/7,Pass,86
+2167296,Churchill,Winston,11/09/2024,Wrong,Correct ,Correct ,Wrong,Wrong,Correct ,Correct ,4/7,Fail,57
+2381052,Einstein,Albert,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100
+2177203,Galilei,Galileo,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100
+2077085,Guevara,Che,11/09/2024,Wrong,Correct ,Correct ,Wrong,Wrong,Correct ,Correct ,4/7,Fail,57
+2415851,Freud,Sigmund,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100
+2213586,Buffett,Warren,11/09/2024,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,Correct ,7/7,Pass,100

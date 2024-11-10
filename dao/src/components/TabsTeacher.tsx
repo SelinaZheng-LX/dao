@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ScatterPlot from "../data/data.tsx";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
@@ -111,7 +112,7 @@ export default function BasicTabs() {
                 <LessonComp lessons={lessons} />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
-                Item Two
+                <ScatterPlot />
             </CustomTabPanel>
         </Box>
     );
